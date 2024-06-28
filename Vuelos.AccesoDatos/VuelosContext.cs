@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,11 +20,12 @@ namespace Vuelos.Entities
         public DbSet<VuelosA> Vuelos { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Reservaciones> Reservaciones { get; set; }
-
+        public DbSet<Rol> Roles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfiguration(new VuelosASemilla());
+            builder.ApplyConfiguration(new RolSemilla());
         }
     }
 

@@ -16,6 +16,8 @@ namespace Vuelos.Entities.Modelos
         public string Origen { get; set; } = "MID";
         public int Asientos { get; set; } = 30;
         public int AsientosOcupados { get; set; } = 0;
+        public string DuracionViaje { get; set; }
+        public string Aerolinea { get;set; } 
         [Required]
         public DateTime Horario { get; set; }
         public double Precio { get; set; } 

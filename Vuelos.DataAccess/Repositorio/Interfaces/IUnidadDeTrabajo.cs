@@ -8,6 +8,11 @@ namespace Vuelos.DataAccess.Repositorio.Interfaces
 {
     public interface IUnidadDeTrabajo:IDisposable
     {
+        IUsuarioRepositorio usuario { get; }
+        IVueloRepositorio vuelo { get; }
+        IReservacionRepositorio reservacion { get; }
+
+
         void Guardar();
     }
 }
