@@ -1,0 +1,37 @@
+
+
+
+<h1>Elige tu Destino</h1>
+
+<mat-form-field>
+  <mat-label>Destino</mat-label>
+  <mat-select  (selectionChange)="change($event.value)">
+    <mat-option *ngFor="let food of destinos" [value]="food" >
+      {{food}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-card appearance="outlined" *ngFor="let vuelo of Vuelos" class="Card">
+    <mat-card-content >  
+        <div>
+            <h3>{{vuelo.origen}}</h3>
+            <p>{{vuelo.horario|date:'dd/MM/  hh:mm a'}}</p>
+            
+        </div>
+    <div>
+        <div>   
+            <img width="100%" height="70px"src="./../../../assets/Img/barra.svg">
+            <p>tiempo de vuelo {{vuelo.duracionViaje|duracion}}</p>
+        </div>
+    </div>
+    <div>
+        <h3>{{vuelo.destino}}</h3>
+        <p>{{vuelo.horario |  date:'yyyy-MM-dd HH:mm:ss' |horariollegada: vuelo.duracionViaje | date:'dd/MM/  hh:mm a' }}</p>
+        
+    </div>
+    
+    
+    </mat-card-content>
+
+  </mat-card>

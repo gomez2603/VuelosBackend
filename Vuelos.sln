@@ -5,11 +5,11 @@ VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vuelos.Entities", "Vuelos.AccesoDatos\Vuelos.Entities.csproj", "{21821FE7-C007-4EB1-B6A2-EC9A32E7A187}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vuelos.DataAccess", "Vuelos.DataAccess\Vuelos.DataAccess.csproj", "{9928AF6D-51C7-45E4-9FE3-8ABE10E01EAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vuelos.DataAccess", "Vuelos.DataAccess\Vuelos.DataAccess.csproj", "{9928AF6D-51C7-45E4-9FE3-8ABE10E01EAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{C3799B69-64DE-4C8A-8920-AE30BFFACEBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vuelos.Domain", "Domain\Vuelos.Domain.csproj", "{C3799B69-64DE-4C8A-8920-AE30BFFACEBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vuelos.Application", "Vuelos.Application\Vuelos.Application.csproj", "{F1E21281-C4F0-4859-AA90-53B1546DC3F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vuelos.Application", "Vuelos.Application\Vuelos.Application.csproj", "{F1E21281-C4F0-4859-AA90-53B1546DC3F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

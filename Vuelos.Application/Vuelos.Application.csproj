@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Domain\Vuelos.Domain.csproj" />
     <ProjectReference Include="..\Vuelos.AccesoDatos\Vuelos.Entities.csproj" />
     <ProjectReference Include="..\Vuelos.DataAccess\Vuelos.DataAccess.csproj" />
   </ItemGroup>
