@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Vuelos.DataAccess.Repositorio.Interfaces;
 
@@ -16,6 +17,7 @@ namespace Vuelos.Application.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public IActionResult GetAll([FromQuery] string? destino)
         {
             if(destino == null)
@@ -28,7 +30,8 @@ namespace Vuelos.Application.Controllers
             }
            
         }
-        [HttpGet("{id}")] 
+        [HttpGet("{id}")]
+        
         public IActionResult GetOne(int id)
         {
             return Ok(_uow.vuelo.ObtenerPrimero(x => x.Id == id));

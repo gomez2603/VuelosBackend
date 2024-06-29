@@ -19,8 +19,9 @@ namespace Vuelos.Entities.Modelos
         public int UsuarioId { get; set; }
         [ForeignKey("UsuarioId")]
         public virtual Usuario? Usuario {get;set;}
-        public int Asiento { get; set; }
+        public string Asientos { get; set; }
         public DateTime TimeSpan { get; set; } = DateTime.Now;
+        public int Total { get; set; }
         public int Estatus { get; set; } = 0;   
 
     }

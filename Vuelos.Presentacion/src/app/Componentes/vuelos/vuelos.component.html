@@ -11,7 +11,8 @@
     </mat-option>
   </mat-select>
 </mat-form-field>
-<button mat-raised-button (click)="openDialog()">Ingresa</button>
+<button mat-raised-button (click)="openDialog()" *ngIf="userId == null">Ingresa</button>
+<button mat-raised-button  routerLink="reservaciones" *ngIf="userId != null">Reservaciones</button>
 <mat-card  appearance="outlined" *ngFor="let vuelo of Vuelos" class="Card" >
     <mat-card-content >  
         <div>
@@ -37,17 +38,17 @@
       <div class="precio economico">
              <h3>Economico</h3>
              <p>{{vuelo.precio}}</p>
-             <button mat-raised-button  routerLink="asientos/{{vuelo.id}}">Elegir</button>
+             <button mat-raised-button (click)="guardarPrecio('economico')" routerLink="asientos/{{vuelo.id}}">Elegir</button>
       </div>
       <div class="precio normal">
          <h3>Normal</h3>
          <p>{{vuelo.precio|normal:'Normal'}}</p>
-         <button mat-raised-button routerLink="asientos/{{vuelo.id}}">Elegir</button>
+         <button mat-raised-button (click)="guardarPrecio('normal')" routerLink="asientos/{{vuelo.id}}">Elegir</button>
       </div>
       <div class="precio ejecutivo">
          <h3>Ejecutivo</h3>
          <p>{{vuelo.precio|normal:'Ejectutivo'}}</p>
-         <button mat-raised-button routerLink="asientos/{{vuelo.id}}">Elegir</button>
+         <button mat-raised-button (click)="guardarPrecio('ejecutivo')" routerLink="asientos/{{vuelo.id}}">Elegir</button>
       </div>
    
       

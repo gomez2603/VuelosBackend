@@ -16,6 +16,7 @@ namespace Vuelos.Entities.Mapping
             CreateMap<Usuario, RegistroUsuarioDto>().ReverseMap();
             CreateMap<Usuario, RespuestaUsuarioDTO>();
             CreateMap<Usuario, UsuariroCreadoResponse>();
+            CreateMap<ReservacionCreateDto, Reservaciones>();
 
         }
     }

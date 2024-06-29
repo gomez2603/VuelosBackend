@@ -1,7 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import { IVuelo } from 'src/app/Modelos/Ivuelo';
 import { ApiService } from 'src/app/Servicios/api.service';
+import { ReservacionService } from 'src/app/Servicios/reservacion.service';
 
 @Component({
   selector: 'app-asientos',
@@ -13,7 +16,11 @@ export class AsientosComponent implements OnInit {
   vuelo:IVuelo
   asientos = Array(30)
   asientosSeleccionados:number[]=[]
-constructor(private aroute:ActivatedRoute,private api:ApiService){
+reservacion:FormGroup
+userId = localStorage.getItem("UserId")
+rol = localStorage.getItem("rol")
+ 
+constructor(private _snackBar: MatSnackBar,private aroute:ActivatedRoute,private api:ApiService,private apireservacion:ReservacionService){
 
   this.id =  this.aroute.snapshot.paramMap.get('id') ;
 }
@@ -22,13 +29,56 @@ constructor(private aroute:ActivatedRoute,private api:ApiService){
       this.vuelo =data
     }) 
     this.asientos.fill(1).map((x, i) => i)
+
+    this.reservacion = new FormGroup({
+      vueloId: new FormControl(this.id),
+      usuarioId: new FormControl(this.userId),
+      asientos : new FormControl(''),
+      total :new FormControl(''),
+      estatus :new FormControl(0)
+      
+    }
+     
+    )
   }
+
 add(asiento:number){
-  debugger
+
 this.asientosSeleccionados.push(asiento)
+let filtro = this.asientosSeleccionados.filter((item,index)=>{
+  return this.asientosSeleccionados.indexOf(item) === index;
+})
+this.asientosSeleccionados = filtro
 
-console.log(this.asientosSeleccionados)
+
+}
+
+delete(asiento:number){
+  const index = this.asientosSeleccionados.indexOf(asiento);
+  if (index > -1) { // only splice array when item is found
+    this.asientosSeleccionados.splice(index, 1); // 2nd parameter means remove one item only
+  }
+}
+
+onSubmit(){
+  let asientostomados = this.asientosSeleccionados.toString()
+  let totalapagar  = this.asientosSeleccionados.length * this.vuelo.precio
+  let categoria = localStorage.getItem("categoria")
+  if(categoria == 'normal'){
+    totalapagar =    Math.trunc(totalapagar*1.35)
+  }
+  if(categoria == 'ejecutivo'){
+    totalapagar =    totalapagar*1.35
+    totalapagar =  Math.trunc(totalapagar*1.45)
+  }
+  this.reservacion.patchValue(
+    {asientos:asientostomados,total:totalapagar,estatus:0},
+   
+  )
+  this.apireservacion.setReservacion(this.reservacion.value).subscribe((data)=>{
+    this._snackBar.open("Se creo la reservacion Correctamente","Cerrar")
+})
+}
 }
 
 
-}

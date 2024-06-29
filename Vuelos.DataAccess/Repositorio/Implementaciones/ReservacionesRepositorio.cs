@@ -24,7 +24,7 @@ namespace Vuelos.DataAccess.Repositorio.Implementaciones
             {
                 reservacionesDb.VueloId = reservaciones.VueloId;
                 reservacionesDb.UsuarioId = reservaciones.UsuarioId;
-                reservacionesDb.Asiento = reservaciones.Asiento;
+                reservacionesDb.Asientos = reservaciones.Asientos;
                 _db.Reservaciones.Update(reservacionesDb);
             }
         }

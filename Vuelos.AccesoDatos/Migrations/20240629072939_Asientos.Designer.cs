@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Vuelos.Entities;
 
@@ -11,9 +12,10 @@ using Vuelos.Entities;
 namespace Vuelos.Entities.Migrations
 {
     [DbContext(typeof(VuelosContext))]
-    partial class VuelosContextModelSnapshot : ModelSnapshot
+    [Migration("20240629072939_Asientos")]
+    partial class Asientos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,9 +41,6 @@ namespace Vuelos.Entities.Migrations
 
                     b.Property<DateTime>("TimeSpan")
                         .HasColumnType("datetime2");
-
-                    b.Property<int>("Total")
-                        .HasColumnType("int");
 
                     b.Property<int>("UsuarioId")
                         .HasColumnType("int");
@@ -177,7 +176,7 @@ namespace Vuelos.Entities.Migrations
                             AsientosOcupados = 0,
                             Destino = "ACA",
                             DuracionViaje = "1:25",
-                            Horario = new DateTime(2024, 6, 30, 5, 59, 57, 505, DateTimeKind.Local).AddTicks(3223),
+                            Horario = new DateTime(2024, 6, 30, 5, 29, 39, 659, DateTimeKind.Local).AddTicks(8819),
                             Origen = "MID",
                             Precio = 400.0
                         },
@@ -189,7 +188,7 @@ namespace Vuelos.Entities.Migrations
                             AsientosOcupados = 4,
                             Destino = "QRO",
                             DuracionViaje = "2:35",
-                            Horario = new DateTime(2024, 6, 30, 3, 59, 57, 505, DateTimeKind.Local).AddTicks(3235),
+                            Horario = new DateTime(2024, 6, 30, 3, 29, 39, 659, DateTimeKind.Local).AddTicks(8830),
                             Origen = "MID",
                             Precio = 800.0
                         },
@@ -201,7 +200,7 @@ namespace Vuelos.Entities.Migrations
                             AsientosOcupados = 8,
                             Destino = "MTY",
                             DuracionViaje = "1:45",
-                            Horario = new DateTime(2024, 6, 30, 7, 59, 57, 505, DateTimeKind.Local).AddTicks(3237),
+                            Horario = new DateTime(2024, 6, 30, 7, 29, 39, 659, DateTimeKind.Local).AddTicks(8831),
                             Origen = "MID",
                             Precio = 2200.0
                         },
@@ -213,7 +212,7 @@ namespace Vuelos.Entities.Migrations
                             AsientosOcupados = 12,
                             Destino = "CUN",
                             DuracionViaje = "1:05",
-                            Horario = new DateTime(2024, 6, 30, 9, 59, 57, 505, DateTimeKind.Local).AddTicks(3238),
+                            Horario = new DateTime(2024, 6, 30, 9, 29, 39, 659, DateTimeKind.Local).AddTicks(8832),
                             Origen = "MID",
                             Precio = 2400.0
                         },
@@ -225,7 +224,7 @@ namespace Vuelos.Entities.Migrations
                             AsientosOcupados = 18,
                             Destino = "TCN",
                             DuracionViaje = "0:35",
-                            Horario = new DateTime(2024, 6, 30, 1, 59, 57, 505, DateTimeKind.Local).AddTicks(3239),
+                            Horario = new DateTime(2024, 6, 30, 1, 29, 39, 659, DateTimeKind.Local).AddTicks(8833),
                             Origen = "MID",
                             Precio = 700.0
                         });

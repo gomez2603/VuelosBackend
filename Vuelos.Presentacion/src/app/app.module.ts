@@ -24,6 +24,7 @@ import { HorariollegadaPipe } from './pipes/horariollegada.pipe';
 import { NormalPipe } from './pipes/normal.pipe';
 import { RegistroComponent } from './Componentes/Login/registro/registro.component';
 import { FormsModule } from '@angular/forms';
+import { ReservacionesComponent } from './Componentes/reservaciones/reservaciones.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { FormsModule } from '@angular/forms';
     DuracionPipe,
     HorariollegadaPipe,
     NormalPipe,
-    RegistroComponent
+    RegistroComponent,
+    ReservacionesComponent
   ],
   imports: [
     FormsModule,

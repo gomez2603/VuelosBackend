@@ -5,7 +5,9 @@ div{
 .avion{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    max-width: 80vw;
+  
+    justify-content: center;
+    justify-items: center;
 }
 .asiento{
     width: 70px;
@@ -15,3 +17,23 @@ div{
     margin: 10PX;   
 }
 
+.wrap{
+    display: flex;
+    margin: 0 auto;
+    }
+    
+    .example-card{
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    height: 70px;
+    width: 70px;
+    max-width: 70px;
+    margin: 12px;
+    text-align: center;
+    }
+
+    .btn{
+        background-color: #005cbb;
+        color: whitesmoke;
+    }

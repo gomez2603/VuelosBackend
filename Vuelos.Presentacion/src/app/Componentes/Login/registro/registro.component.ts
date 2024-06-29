@@ -60,6 +60,7 @@ crearCookie(data:any){
    
    
   localStorage.setItem("token",data.token)
+  localStorage.setItem("UserId",data.id)
   localStorage.setItem("name",data.nombres)
   localStorage.setItem("lastname",data.apellidos)
   localStorage.setItem("email",data.email)

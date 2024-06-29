@@ -17,11 +17,15 @@ import { RegistroComponent } from '../Login/registro/registro.component';
 export class VuelosComponent implements OnInit{
 Vuelos:IVuelo[] = []
 option:string=""
+userId
+
 constructor(private api:ApiService,private datePipe: DatePipe,private router:Router,public dialog: MatDialog){ }
   ngOnInit(): void {
     this.api.getAllVuelos(this.option).subscribe(data=>{
       this.Vuelos = data
     })
+     this.userId = localStorage.getItem("UserId")
+    console.log(this.userId)
   }
 
 destinos:string[]= [''  ,'ACA','QRO','MTY','CUN','TCN']
@@ -43,7 +47,9 @@ openDialog(): void {
   });
 }
 
-
+guardarPrecio(categoria:string){
+  localStorage.setItem("categoria",categoria)
+}
 
 
 

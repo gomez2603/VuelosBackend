@@ -21,7 +21,7 @@ builder.Services.AddDbContext<VuelosContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("Vuelos")));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
 
 //Inyeccion de Dependencias
 builder.Services.AddScoped<IUnidadDeTrabajo, UnidadDeTrrabajo>();
@@ -31,7 +31,7 @@ builder.Services.AddScoped<IAuthService, AuthServicio>();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 //JWT
 builder.Services.AddSwaggerGen(options => {
-    options.AddSecurityDefinition("jwt", new OpenApiSecurityScheme
+    options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
     {
         Description = "Standar Authorization Header using JWTToken",
         In = ParameterLocation.Header,
@@ -79,7 +79,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+app.UseAuthentication();
+
+app.UseAuthorization(); 
 
 app.MapControllers();
 
