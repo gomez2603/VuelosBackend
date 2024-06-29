@@ -16,4 +16,9 @@ export class ApiService {
 
     return this.http.get<IVuelo[]>(direccion,{params})
   }
+
+  getOneVuelos(id:any):Observable<IVuelo>{
+  let direccion = this.url+"Vuelos/"+id
+  return this.http.get<IVuelo>(direccion)
+  }
 }

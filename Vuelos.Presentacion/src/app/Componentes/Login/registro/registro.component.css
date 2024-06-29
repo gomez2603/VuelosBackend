@@ -1,0 +1,15 @@
+mat-form-field{
+    display: block;
+    width: 400px;
+    margin: 10px;
+}
+
+mat-tab{
+height: 700px;
+}
+
+.btn{
+    background-color: #005cbb;
+    color: whitesmoke;
+}
+

@@ -3,6 +3,9 @@ import { IVuelo } from 'src/app/Modelos/Ivuelo';
 import { ApiService } from 'src/app/Servicios/api.service';
 import { DatePipe } from '@angular/common';
 import { MatSelect } from '@angular/material/select';
+import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { RegistroComponent } from '../Login/registro/registro.component';
 
 
 
@@ -14,7 +17,7 @@ import { MatSelect } from '@angular/material/select';
 export class VuelosComponent implements OnInit{
 Vuelos:IVuelo[] = []
 option:string=""
-constructor(private api:ApiService,private datePipe: DatePipe){ }
+constructor(private api:ApiService,private datePipe: DatePipe,private router:Router,public dialog: MatDialog){ }
   ngOnInit(): void {
     this.api.getAllVuelos(this.option).subscribe(data=>{
       this.Vuelos = data
@@ -30,6 +33,16 @@ this.option = option
     this.Vuelos = data
   })
 }
+openDialog(): void {
+  const dialogRef = this.dialog.open(RegistroComponent, {
+    
+  });
+
+  dialogRef.afterClosed().subscribe(result => {
+  
+  });
+}
+
 
 
 

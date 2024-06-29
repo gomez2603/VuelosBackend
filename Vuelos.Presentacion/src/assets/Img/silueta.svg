@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1980px" height="2856px" viewBox="0 0 1980 2856" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>A321_239</title>
+    <defs>
+        <path d="M986.010456,2547.9995 L985.985526,2547.9995 L826.028191,2547.9995 C826.028191,2547.9995 823.747063,2579.8921 860.224332,2787.22674 C862.085799,2797.81267 868.160496,2807.40472 877.318248,2813.95351 C896.356732,2827.57113 933.640083,2847.9995 985.997991,2847.9995 C1038.36005,2847.9995 1075.6434,2827.57113 1094.67773,2813.95351 C1103.83964,2807.40472 1109.91018,2797.81267 1111.7758,2787.22674 C1148.24892,2579.8921 1145.97195,2547.9995 1145.97195,2547.9995 L986.010456,2547.9995 Z M826.000854,424.973948 C826.057385,423.30479 828.932845,339.524051 838.715727,274.961241 C852.503565,181.518678 897.137429,85.3250536 939.228148,26.2746534 C957.754215,1.05030508 983.813257,0.0413311458 985.868339,0.000972188425 L986.127506,0.000972188425 C988.182594,0.0413311458 1014.2418,1.05030508 1032.77185,26.2746534 C1074.85842,85.3250536 1119.49644,181.518678 1133.28012,274.961241 C1143.16182,340.1762 1146,424.999291 1146,424.999291 L1146,424.999291 L1145.99992,1199.47623 C1148.74408,1202.89882 1152.19808,1205.75112 1156.17946,1207.80749 L1972,1628.97958 L1972,1797.95126 L1446.91323,1632.90234 C1432.86094,1628.48804 1418.23923,1626.16 1403.50831,1626.00012 L1146,1614.837 L1146,2547.99929 L826,2547.99929 L826,1614.837 L568.491688,1626.00012 C554.169964,1626.15556 539.951461,1628.36037 526.259104,1632.53931 L525.086772,1632.90234 L0,1797.95126 L0,1628.97958 L815.820537,1207.80749 C819.802306,1205.75092 823.256587,1202.89827 826.000877,1199.47524 Z" id="path-1"></path>
+        <filter x="-0.4%" y="-0.2%" width="100.7%" height="100.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="SVG_Lopa" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="A321_239" transform="translate(4.000000, 2.000000)">
+            <g id="Plane">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <g id="Windows" transform="translate(864.000000, 126.000975)" fill="#000000" fill-opacity="0.03">
+                <path d="M14.3558826,103 L0,147 L20.3918787,147 L29.7721429,139 L46,103 L14.3558826,103 Z M49.726166,42 L62,74.8327263 L47.1231139,98 L15,98 L15.6447188,96.0386663 L39.8216735,54.8506584 L49.726166,42 Z M120,0 L120,40.2842973 L64.8298684,71 L53,38.9146362 L120,0 Z"></path>
+                <path d="M138.355883,103 L124,147 L144.391879,147 L153.772143,139 L170,103 L138.355883,103 Z M173.726166,42 L186,74.8327263 L171.123114,98 L139,98 L139.644719,96.0386663 L163.821674,54.8506584 L173.726166,42 Z M244,0 L244,40.2842973 L188.829868,71 L177,38.9146362 L244,0 Z" transform="translate(184.000000, 73.500000) scale(-1, 1) translate(-184.000000, -73.500000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

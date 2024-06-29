@@ -11,8 +11,8 @@
     </mat-option>
   </mat-select>
 </mat-form-field>
-
-<mat-card appearance="outlined" *ngFor="let vuelo of Vuelos" class="Card">
+<button mat-raised-button (click)="openDialog()">Ingresa</button>
+<mat-card  appearance="outlined" *ngFor="let vuelo of Vuelos" class="Card" >
     <mat-card-content >  
         <div>
             <h3>{{vuelo.origen}}</h3>
@@ -33,5 +33,25 @@
     
     
     </mat-card-content>
+    <mat-card-footer >
+      <div class="precio economico">
+             <h3>Economico</h3>
+             <p>{{vuelo.precio}}</p>
+             <button mat-raised-button  routerLink="asientos/{{vuelo.id}}">Elegir</button>
+      </div>
+      <div class="precio normal">
+         <h3>Normal</h3>
+         <p>{{vuelo.precio|normal:'Normal'}}</p>
+         <button mat-raised-button routerLink="asientos/{{vuelo.id}}">Elegir</button>
+      </div>
+      <div class="precio ejecutivo">
+         <h3>Ejecutivo</h3>
+         <p>{{vuelo.precio|normal:'Ejectutivo'}}</p>
+         <button mat-raised-button routerLink="asientos/{{vuelo.id}}">Elegir</button>
+      </div>
+   
+      
+     </mat-card-footer>
+ 
 
   </mat-card>

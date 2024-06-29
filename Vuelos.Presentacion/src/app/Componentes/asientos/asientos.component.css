@@ -1,0 +1,17 @@
+div{
+    display: grid;
+}   
+
+.avion{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 80vw;
+}
+.asiento{
+    width: 70px;
+    height: 70px;
+    border: solid black 2px;
+    display: flex;
+    margin: 10PX;   
+}
+

@@ -1,1 +1,9 @@
-<p>asientos works!</p>
+<h1>Seleccione sus Asientos</h1>
+<div class="avion" >
+<div  class="asiento" *ngFor="let item of asientos; index as i">
+   <a (click)="add(i+1)">{{i+1}}</a>
+</div>
+</div>
+
+<h2>Asientos Seleccionados</h2>
+<p *ngFor="let select of asientosSeleccionados">{{select}}</p>
