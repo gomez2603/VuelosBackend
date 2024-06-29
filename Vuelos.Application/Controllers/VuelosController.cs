@@ -17,7 +17,7 @@ namespace Vuelos.Application.Controllers
         }
 
         [HttpGet]
-        [Authorize]
+      
         public IActionResult GetAll([FromQuery] string? destino)
         {
             if(destino == null)

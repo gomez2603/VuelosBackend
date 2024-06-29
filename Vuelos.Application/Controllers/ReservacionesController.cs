@@ -56,7 +56,7 @@ namespace Vuelos.Application.Controllers
             }
             if(reservacion.Estatus == 1)
             {
-                return BadRequest("La reservacion no puede ser cancelada");
+                return BadRequest("La reservacion no puede ser cancelada"); 
             }
             var estatus = DateTime.Compare(DateTime.Now, reservacion.TimeSpan.AddMinutes(30));
             if (estatus >  0 && reservacion.Estatus == 0)
