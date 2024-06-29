@@ -17,4 +17,13 @@ UserId =localStorage.getItem("UserId")
     let direccion = this.url+'Reservaciones?Id='+ this.UserId
     return this.http.get(direccion)
   }
+  delete(id:number){
+    let direccion = this.url+"Reservaciones/" +id
+    return this.http.delete(direccion)
+  }
+
+  payReservacion(id:number){
+    let direccion = this.url+"Reservaciones/pagar/" +id
+    return this.http.get(direccion)
+  }
 }

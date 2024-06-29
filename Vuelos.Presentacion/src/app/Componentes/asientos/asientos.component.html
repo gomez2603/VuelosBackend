@@ -1,14 +1,14 @@
 <h1>Seleccione sus Asientos</h1>
 <div class="avion" >
 <div  class="asiento" *ngFor="let item of asientos; index as i">
-   <a style="width: 70px; height: 70px;" (click)="add(i+1)">{{i+1}}</a>
+   <a  [ngClass]="ocupado(i+1)? 'ocupado' : ''" style="width: 70px; height: 70px;"  (click)="add(i+1)">{{i+1}}</a>
 </div>
 </div>
 
 <h2>Asientos Seleccionados</h2>
 <div class="wrap">
 <mat-card *ngFor="let select of asientosSeleccionados" class="example-card">
-    <mat-card-content>
+    <mat-card-content >
         <a style="width: 70px; height: 70px;" (click)="delete(select)">
   
         {{select}}

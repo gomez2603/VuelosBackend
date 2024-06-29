@@ -1,0 +1,34 @@
+<div mat-dialog-content>
+    <form class="example-form" (ngSubmit)="onSubmit()" [formGroup]="TarjetaForm" action="Post">
+        <mat-form-field class="example-full-width">
+          <mat-label>Nombre En La Tarjeta</mat-label>
+          <input matInput placeholder="Nombre en la Tarjeta" type="text" formControlName="nombre">
+        </mat-form-field>
+      <br>
+        <mat-form-field class="example-full-width">
+          <mat-label>Numero de Tarjeta</mat-label>
+          <input matInput placeholder="Numero de Tarjeta" type="number" formControlName="numeroTarjeta">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Fecha de Vencimiento</mat-label>
+            <input matInput placeholder="MM/AA" type="number" formControlName="caducidad">
+          </mat-form-field>
+          <br>
+          <mat-form-field class="example-full-width">
+            <mat-label>CVV</mat-label>
+            <input matInput placeholder="CVV" type="number" formControlName="cvv">
+          </mat-form-field>
+          <br>
+          <mat-form-field class="example-full-width">
+            <mat-label>Codigo Postal</mat-label>
+            <input matInput placeholder="Codigo Postal" type="number" formControlName="cp">
+          </mat-form-field>
+          <br>
+
+        
+        <button mat-raised-button type="submit" class="btn btn-primary">Pagar</button>
+      </form>
+
+
+</div>

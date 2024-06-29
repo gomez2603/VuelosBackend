@@ -20,11 +20,13 @@ namespace Vuelos.DataAccess.Repositorio.Implementaciones
         public void Actualizar(Reservaciones reservaciones)
         {
             var reservacionesDb  = _db.Reservaciones.FirstOrDefault(x=> x.Id == reservaciones.Id);
-            if(reservacionesDb != null)
+            if (reservacionesDb != null)
             {
                 reservacionesDb.VueloId = reservaciones.VueloId;
                 reservacionesDb.UsuarioId = reservaciones.UsuarioId;
                 reservacionesDb.Asientos = reservaciones.Asientos;
+                reservacionesDb.Estatus = reservaciones.Estatus;
+                reservaciones.Confirmacion = reservaciones.Confirmacion;
                 _db.Reservaciones.Update(reservacionesDb);
             }
         }

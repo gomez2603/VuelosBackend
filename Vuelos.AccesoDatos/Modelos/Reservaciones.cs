@@ -24,6 +24,7 @@ namespace Vuelos.Entities.Modelos
         public int Total { get; set; }
         
         public int Estatus { get; set; } = 0;   
+        public string Confirmacion { get; set; } = string.Empty;
 
     }
 }

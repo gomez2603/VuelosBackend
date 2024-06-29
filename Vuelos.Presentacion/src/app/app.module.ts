@@ -26,6 +26,7 @@ import { RegistroComponent } from './Componentes/Login/registro/registro.compone
 import { FormsModule } from '@angular/forms';
 import { ReservacionesComponent } from './Componentes/reservaciones/reservaciones.component';
 import { AuthInterceptor } from './Interceptors/auth.interceptor';
+import { PagoTarjetaComponent } from './Componentes/pago-tarjeta/pago-tarjeta.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ import { AuthInterceptor } from './Interceptors/auth.interceptor';
     HorariollegadaPipe,
     NormalPipe,
     RegistroComponent,
-    ReservacionesComponent
+    ReservacionesComponent,
+    PagoTarjetaComponent
   ],
   imports: [
     FormsModule,

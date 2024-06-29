@@ -37,3 +37,7 @@ div{
         background-color: #005cbb;
         color: whitesmoke;
     }
+    .ocupado{
+        background-color: red;
+        pointer-events: none;
+    }

@@ -16,6 +16,6 @@ namespace Vuelos.Entities.DTOs
         public string Asientos { get; set; }
         public int total { get; set; }
         public int estatus { get; set; }
-    
+        public string Confirmacion { get; set; }
     }
 }
