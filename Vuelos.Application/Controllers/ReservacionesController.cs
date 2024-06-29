@@ -65,7 +65,8 @@ namespace Vuelos.Application.Controllers
                 _uow.Guardar();
                 return BadRequest("Reservacion expirada");
             }
-            if(reservacion.Vuelo.Horario.AddHours(5) > DateTime.Now)
+            var apartar = DateTime.Compare(DateTime.Now, reservacion.Vuelo.Horario.AddHours(5));
+            if (apartar>0)
             {
                 return BadRequest("Su reservacion ya no se puede cancelar");
             }
