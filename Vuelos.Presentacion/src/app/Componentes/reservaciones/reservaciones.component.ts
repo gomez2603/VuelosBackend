@@ -19,6 +19,6 @@ export class ReservacionesComponent implements OnInit {
   }
 
 
-
+  displayedColums: string[] = ['vueloId','vueloDestino','asientos','total','acciones']
   
 }

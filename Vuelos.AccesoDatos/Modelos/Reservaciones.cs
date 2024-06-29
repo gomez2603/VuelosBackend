@@ -22,6 +22,7 @@ namespace Vuelos.Entities.Modelos
         public string Asientos { get; set; }
         public DateTime TimeSpan { get; set; } = DateTime.Now;
         public int Total { get; set; }
+        
         public int Estatus { get; set; } = 0;   
 
     }

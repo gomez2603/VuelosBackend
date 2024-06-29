@@ -25,8 +25,11 @@ namespace Vuelos.Application.Controllers
         [Authorize]
         public IActionResult GetReservaciones([FromQuery] int Id)
         {
-           
-            return Ok(_uow.reservacion.ObtenerTodos(x => x.UsuarioId == Id,incluirPropiedades: "Vuelo,Usuario"));
+            var reservacion = _uow.reservacion.ObtenerTodos(x => x.UsuarioId == Id, incluirPropiedades: "Vuelo,Usuario");
+            var map = _map.Map<IEnumerable<Reservaciones>, IEnumerable<ReservacionesResponseDto>>(reservacion);
+
+
+            return Ok(map);
         }
 
         [HttpPost]

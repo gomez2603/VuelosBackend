@@ -10,7 +10,7 @@ import { VuelosComponent } from './Componentes/vuelos/vuelos.component';
 import { AsientosComponent } from './Componentes/asientos/asientos.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
 import { MatIconModule} from '@angular/material/icon';
 import {MatSelectModule} from '@angular/material/select';
@@ -25,6 +25,7 @@ import { NormalPipe } from './pipes/normal.pipe';
 import { RegistroComponent } from './Componentes/Login/registro/registro.component';
 import { FormsModule } from '@angular/forms';
 import { ReservacionesComponent } from './Componentes/reservaciones/reservaciones.component';
+import { AuthInterceptor } from './Interceptors/auth.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +55,11 @@ import { ReservacionesComponent } from './Componentes/reservaciones/reservacione
     MatTableModule,
     RouterModule
   ],
-  providers: [DatePipe],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass:AuthInterceptor,
+    multi: true
+  },DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
