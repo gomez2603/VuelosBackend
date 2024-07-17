@@ -1,18 +1,23 @@
 
-
-
 <h1>Elige tu Destino</h1>
+<div class="header">
+
 
 <mat-form-field>
   <mat-label>Destino</mat-label>
   <mat-select  (selectionChange)="change($event.value)">
-    <mat-option *ngFor="let food of destinos" [value]="food" >
-      {{food}}
+    <mat-option *ngFor="let destino of destinos" [value]="destino" >
+      {{destino}}
     </mat-option>
   </mat-select>
 </mat-form-field>
-<button mat-raised-button (click)="openDialog()" *ngIf="userId == null">Ingresa</button>
+
+<button mat-icon-button aria-label="Example icon button with a vertical three dot icon" (click)="openDialog()" *ngIf="userId == null">
+  <mat-icon>account_circle</mat-icon>
+
+</button>
 <button mat-raised-button  routerLink="reservaciones" *ngIf="userId != null">Reservaciones</button>
+</div>
 <mat-card  appearance="outlined" *ngFor="let vuelo of Vuelos" class="Card" >
     <mat-card-content >  
         <div>
